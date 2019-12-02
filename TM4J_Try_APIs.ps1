@@ -96,7 +96,6 @@ function GetTestExecutions {
 # Start
 ##################
 
-<#
 Write-Host "TestCases: "
 
 $testcases = GetTCases
@@ -109,6 +108,7 @@ foreach ( $tc in $testcases ) {
         Write-Host "     " $i.issueID
     }
 }
+<#
 $testcycles = GetTCycles
 
 Write-Host "TestCycles: "
@@ -128,8 +128,8 @@ foreach ( $p in $projects ) {
 
 $TCaseKey = CreateTCase
 CreateIssueLink -TCaseKey $TCaseKey -IssueId 10006
-#>
 
 #$tc = GetTCase -TCaseKey "FDM-T2"
 
 $testexecutions = GetTestExecutions
+#>
